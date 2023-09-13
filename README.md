@@ -1,5 +1,5 @@
 <p align='center'>
-<img src='https://github.com/waqarg2001/Coivid-19-DE-Project/blob/main/Resources/Logo.png' width=600 height=300 >
+<img src='https://github.com/waqarg2001/Coivid-19-DE-Project/blob/main/Resources/Logo.png' width=630 height=290 >
 </p>
 
 ---
