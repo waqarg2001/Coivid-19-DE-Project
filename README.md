@@ -4,7 +4,7 @@
 
 ---
 
-<h4 align='center'> Utilisation of <a href='https://azure.microsoft.com/en-us' target='_blank'>Azure Cloud Services</a> to architect and orchestrate data pipeline to perform ETL on Formula 1 racing dataset extracted from <a href='https://ergast.com/mrd/'>Ergast Developer API.</a> </h4>
+<h4 align='center'> Utilisation of <a href='https://azure.microsoft.com/en-us' target='_blank'>Azure Cloud Services</a> to architect and orchestrate data pipeline(weekly) to perform ETL on Covid-19 dataset of European countries extracted from <a href='https://www.ecdc.europa.eu/en/covid-19/data'>European Centre for Disease Prevention and Control</a> </h4>
 
 <p align='center'>
 <img src="https://i.ibb.co/KxfMMsP/built-with-love.png" alt="built-with-love" border="0">
@@ -24,36 +24,31 @@
 
 ## Overview
 
-<p>The Ergast Developer API is an experimental web service that provides a historical record of motor racing data for non-commercial purposes. The API provides data for the Formula One series, from the beginning of the world championships in 1950 until now.</p>
+<p>The European Centre for Disease Prevention and Control (ECDC) was established in 2005. It is an EU agency aimed at strengthening Europe's defenses against infectious diseases.</p>
 
-This project showcases a seamless data journey facilitated by Azure services. It begins with data extraction from the Ergast Developer API and harnesses Azure components such as Azure Active Directory, Service Principal, Azure Databricks, Key Vault, Azure Data Factory, and Azure Data Lake Gen2 to orchestrate this process efficiently. Within Azure Databricks, powered by Apache Spark, data undergoes the ETL (Extract, Transform, Load) process. The data begins its journey in the 'ingestion' folder, where it is initially received. It then proceeds to the 'transformations' folder, where it is refined and enhanced. Finally, the data finds its destination in the 'analysis' folder, where it is carefully organized and prepared for analysis. The orchestration of this data journey is managed through Azure Data Factory, representing a structured and efficient approach to data engineering and analysis.
+Covid 19 Analysis is a comprehensive project that harnesses the capabilities of Azure services to collect, analyze, and visualize essential COVID-19 data while ensuring robust security through Azure Key Vault and Azure Service Principals. This project seamlessly retrieves data from the European Centre for Disease Prevention and Control (ECDC) and combines it with population data for a comprehensive analysis of the pandemic's impact. Data is ingested into Azure Data Lake Gen2, which acts as a centralized storage repository, and then undergoes transformations and exploratory analysis using Azure Dataflow and Azure Databricks. To maintain stringent security, Azure Key Vault is employed to securely manage and store sensitive credentials and secrets. Processed data is stored in an Azure SQL Database for efficient querying, and Azure Data Lake Gen2 is used for intermediate and refined datasets. The project includes the use of Power Bi for showcasing the spread and testing of Covid 19 in European countries.
 
 The repository directory structure is as follows:
 
 ```
 ├── README.md          <- The top-level README for developers using this project. 
 | 
-├── Raw           <- Contains script to define table schemas
-| 
-├── Transformations         <- Scripts to aggregate and transform data
-│  
-├── analysis         <- Basic analysis of data from the transformations folder.  
-| 
-│ 
-├── include                <- Configuration folder 
-│   ├── common_functions.py    <- Common functions used throughout the ETL process.
-│   │ 
-│   ├── configuration.py       <- Houses configuration settings such as variables.
-│      
+├── Data             <- Contains data extracted, processed, and used throughout the project.
+│   ├── Raw          <- Contains raw data folders
+│   │
+│   ├── Processed    <- Contains processed data acquired through databricks spark notebooks and azre data flow.
+│   │
+│   ├── Lookup       <- Contains look up files used for population and country info.
+│   │
+│   ├── Config       <- Contains file used to automate the extraction part for ADF.
+│
+│
+├── Databricks Notebooks         <- Scripts to aggregate and transform data
+│   ├── configuration           <- Contains configurations used for mounting ADLS and azure key vault.
+│   │
+│   ├── transformation          <- Contains transformation notebooks 
 |         
-|
-├── ingestion          <- Ingestion scripts for data files from ADLS Gen 2.
-│      
-├── resources          <- Resources for readme file.
-|
-├── set-up             <- Script for mounting ADLS Gen 2 to Databricks
-|         
-├── utils              <- SQL scripts for incremental load.
+├── Resources                  <- Resources for readme file.
 ```
 
 ## Tools 
@@ -65,6 +60,8 @@ To build this project, the following tools were used:
 - Azure Active Directory
 - Azure DataLake Gen 2
 - Azure Data Factory
+- Azure SQL Databse
+- Power Bi
 - Pyspark
 - SQL
 - Git
