@@ -16,7 +16,6 @@
   <a href="#overview">Overview</a> •
   <a href="#tools">Tools</a> •
   <a href="#architecture">Architecture</a> •
-  <a href="#erd">ERD</a> •
   <a href="#support">Support</a> •
   <a href="#license">License</a>
 </p>
@@ -60,7 +59,7 @@ To build this project, the following tools were used:
 - Azure Active Directory
 - Azure DataLake Gen 2
 - Azure Data Factory
-- Azure SQL Databse
+- Azure SQL Database
 - Power Bi
 - Pyspark
 - SQL
@@ -68,28 +67,17 @@ To build this project, the following tools were used:
 
 ## Architecture
 
-The architecture of this project is inspired by the following, taken from Azure Architecture Center.
+The architecture of this project is inspired by the following architecture.
 
 <p align='center'>
-  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/arch.png' height=470 width=600>
+  <img src='https://github.com/waqarg2001/Coivid-19-DE-Project/blob/main/Resources/architecture_diagram.png' height=470 width=600>
 </p>  
-
-
-
-## ERD
-
-The database structure is shown in the following ER Diagram and explained in the <a href='http://ergast.com/docs/f1db_user_guide.txt' >Database User Guide</a>.
-
-<p align='center'>
-  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/erd.png' width=600 height=470>
-</p>  
-
 
 
 
 ## Support
 
-If you have any doubts, queries or, suggestions then, please connect with me on any of the following platforms:
+If you have any doubts, queries, or suggestions then, please connect with me on any of the following platforms:
 
 [![Linkedin Badge][linkedinbadge]][linkedin] 
 [![Gmail Badge][gmailbadge]][gmail]
